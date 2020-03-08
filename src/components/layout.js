@@ -1,51 +1,46 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import Footer from './footer'
 
-import Header from "./header"
-import "./layout.css"
+import './layout.css'
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
+const LayoutWrapper = styled.div`
+  font-family: 'Montserrat', sans-serif;
+  background-image: radial-gradient(
+    ellipse 20px 20px,
+    var(--secondary-bg-color),
+    var(--secondary-bg-color) 25%,
+    var(--main-bg-color) 25%
+  );
+  background-size: 16px 16px;
+  color: var(--sec-color);
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  min-height: 100vh;
+`
 
+const Main = styled.main`
+  flex: 1;
+  margin: ${({ noMargin }) => (noMargin ? 0 : '0 256px')};
+`
+
+const Layout = ({ children, noMargin }) => {
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+      <LayoutWrapper>
+        <Main noMargin={noMargin}>{children}</Main>
+        <Footer />
+      </LayoutWrapper>
     </>
   )
 }
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  noMargin: PropTypes.bool,
 }
 
 export default Layout

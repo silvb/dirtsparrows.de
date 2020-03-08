@@ -1,0 +1,171 @@
+<!doctype html>
+<html ⚡️ lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <title>Dirt Sparrows</title>
+    <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
+    <link href="https://fonts.googleapis.com/css?family=Notable|Roboto&display=swap" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.12.1/css/brands.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/apple-icon.png">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <style amp-custom>
+      :root {
+        --main-bg-color: #162539;
+        --sencondary-bg-color: #162539;
+        --main-color: #ff884e;
+        --sec-color: oldlace;
+      }
+
+      body {
+        background: var(--main-bg-color);
+        background-image: radial-gradient(
+                            ellipse  4em 4em ,
+                            var(--main-bg-color),
+                            var(--main-bg-color) 25%,
+                            var(--sencondary-bg-color) 25%);
+        background-size: 2em 2em;
+        color: var(--sec-color);
+        font-family: 'Roboto', sans-serif;
+      }
+
+      .main-container {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: stretch;
+        justify-content: space-between;
+        height: 100vh;
+      }
+
+      a {
+        text-decoration: none;
+        color: var(--sec-color);
+      }
+
+      a.link-spotify {
+        font-size: 24px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        border: 6px solid var(--main-color);
+        background-color: rgba(255,255,255,0.1);
+        padding: 32px 48px;
+        text-shadow: 2px 2px black;
+        transition: background-color 200ms ease, color 200ms ease;
+        box-shadow: 4px 4px 2px black, 2px 2px 2px black inset;
+      }
+
+      a.link-spotify:hover {
+        background: var(--main-color);
+        color: var(--main-bg-color);
+        box-shadow: 4px 4px 2px black;
+        text-shadow: none;
+      }
+
+      a.link-spotify i {
+        margin-bottom: 23px;
+        font-size: 64px;
+      }
+
+      header {
+        background: url('./images/dirt_sparrow.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 55% 0%;
+        height: 76vh;
+        max-width: 800px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+        padding-top: 100px;
+        margin: 40px auto 0;
+      }
+
+      header h1 {
+        font-family: 'Notable', sans-serif;
+        text-align: center;
+        color: var(--main-color);
+        font-size: 72px;
+        text-shadow: 4px 4px black;
+        margin-bottom: 50px;
+      }
+
+      footer {
+        padding: 12px 20px;
+        opacity: 0.8;
+      }
+
+      footer ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      footer ul li {
+        display: inline-block;
+      }
+
+      footer ul li:not(:last-child):after {
+        content: ' ‧ ';
+        padding: 0 8px;
+      }
+
+      @media(max-width: 800px) {
+        header h1 {
+          font-size: 40px;
+        }
+
+        a.link-spotify {
+          font-size: 18px;
+          padding: 16px 24px;
+        }
+
+        a.link-spotify i {
+          font-size: 40px;
+        }
+
+        header {
+          padding-top: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <header>
+        <h1>
+          Dirt Sparrows
+        </h1>
+        <a href="spotify:artist:53KX37tmvQky7fhoiRLPzL" class="link-spotify">
+          <i class="fab fa-spotify"></i>
+          <span>
+          Hör uns auf Spotify
+          </span>
+        </a>
+      </header>
+      <footer>
+        <ul>
+          <li>
+            <span>
+              © 2020 Dirt Sparrows
+            </span>
+          </li>
+          <li>
+            <a target="_blank" href="datenschutzerklaerung/index.html">
+              Datenschutzerklärung
+            </a>
+          </li>
+              <li>
+            <a target="_blank" href="impressum/index.html">
+              Impressum
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>
