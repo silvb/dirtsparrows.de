@@ -16,6 +16,7 @@ const LinkButton = styled.a`
   &:hover {
     background: var(--main-color);
     color: var(--main-bg-color);
+    opacity: 0.8;
   }
 
   & span {
