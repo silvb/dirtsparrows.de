@@ -22,7 +22,7 @@ const BackgroundSection = ({ children, className }) => (
       // Set ImageData.
       const imageData = data.desktop.childImageSharp.fluid
       return (
-        <BackgroundImage className={className} Tag="section" fluid={imageData}>
+        <BackgroundImage className={className} Tag="div" fluid={imageData}>
           {children}
         </BackgroundImage>
       )
@@ -40,8 +40,14 @@ const MainContainer = styled(BackgroundSection)`
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  padding-top: 150px;
+  padding-top: 190px;
   margin: 40px auto 0;
+
+  @media (max-width: 800px) {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 100px;
+  }
 `
 
 const Title = styled.h1`
@@ -50,6 +56,10 @@ const Title = styled.h1`
   color: var(--main-color);
   font-size: 64px;
   margin-bottom: 50px;
+
+  @media (max-width: 800px) {
+    font-size: 40px;
+  }
 `
 
 const TitleSection = () => (

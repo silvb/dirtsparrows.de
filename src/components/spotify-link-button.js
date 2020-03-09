@@ -12,15 +12,24 @@ const LinkButton = styled.a`
   padding: 32px 48px;
   transition: background-color 200ms ease, color 200ms ease;
   color: var(--sec-color);
+  opacity: 0.8;
 
   &:hover {
     background: var(--main-color);
     color: var(--main-bg-color);
-    opacity: 0.8;
   }
 
   & span {
     margin-top: 23px;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 18px;
+    padding: 16px 24px;
+
+    i {
+      font-size: 40px;
+    }
   }
 `
 

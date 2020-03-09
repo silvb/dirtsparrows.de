@@ -26,6 +26,10 @@ const StyledFooter = styled.footer`
       }
     }
   }
+
+  @media (max-width: 800px) {
+    font-size: 14px;
+  }
 `
 
 const Footer = () => (
