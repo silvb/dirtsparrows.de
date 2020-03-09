@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 const StyledFooter = styled.footer`
-  padding: 12px 20px;
+  padding: 16px 20px;
   opacity: 0.8;
 
   & ul {
@@ -14,6 +14,7 @@ const StyledFooter = styled.footer`
 
     & li {
       display: inline-block;
+      margin: 0;
 
       &:not(:last-child):after {
         content: ' ‧ ';
