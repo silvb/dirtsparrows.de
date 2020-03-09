@@ -11,7 +11,7 @@ const BackgroundSection = ({ children, className }) => (
       query {
         desktop: file(relativePath: { eq: "dirt-sparrow.png" }) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 1263) {
+            fluid(quality: 90, maxWidth: 800) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
