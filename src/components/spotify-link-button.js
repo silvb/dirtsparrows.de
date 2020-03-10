@@ -14,7 +14,7 @@ const LinkButton = styled.a`
   transition: background-color 200ms ease, color 200ms ease;
   color: var(--sec-color);
   opacity: 0.8;
-  font-size: 64px;
+  font-size: 24px;
 
   &:hover {
     background: var(--main-color);
@@ -22,23 +22,36 @@ const LinkButton = styled.a`
   }
 
   & span {
-    margin-top: 23px;
-    font-size: 24px;
+    margin-top: 24px;
   }
 
   @media (max-width: 800px) {
-    font-size: 40px;
     padding: 16px 24px;
+    font-size: 16px;
 
     & span {
-      font-size: 18px;
+      margin-top: 16px;
     }
+  }
+`
+
+const ResponsiveIconContainer = styled.div`
+  width: 64px;
+  height: 64px;
+  font-size: 64px;
+
+  @media (max-width: 800px) {
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
   }
 `
 
 const SpotifyLinkButton = ({ link, text }) => (
   <LinkButton href={link}>
-    <FontAwesomeIcon icon={faSpotify} size={'1x'} />
+    <ResponsiveIconContainer>
+      <FontAwesomeIcon icon={faSpotify} size={'1x'} />
+    </ResponsiveIconContainer>
     <span>{text}</span>
   </LinkButton>
 )
