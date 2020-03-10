@@ -1,5 +1,6 @@
 import React from 'react'
-import { FaSpotify } from 'react-icons/fa'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSpotify } from '@fortawesome/free-brands-svg-icons'
 import styled from 'styled-components'
 
 const LinkButton = styled.a`
@@ -13,6 +14,7 @@ const LinkButton = styled.a`
   transition: background-color 200ms ease, color 200ms ease;
   color: var(--sec-color);
   opacity: 0.8;
+  font-size: 64px;
 
   &:hover {
     background: var(--main-color);
@@ -21,21 +23,22 @@ const LinkButton = styled.a`
 
   & span {
     margin-top: 23px;
+    font-size: 24px;
   }
 
   @media (max-width: 800px) {
-    font-size: 18px;
+    font-size: 40px;
     padding: 16px 24px;
 
-    i {
-      font-size: 40px;
+    & span {
+      font-size: 18px;
     }
   }
 `
 
 const SpotifyLinkButton = ({ link, text }) => (
   <LinkButton href={link}>
-    <FaSpotify size={'64px'} />
+    <FontAwesomeIcon icon={faSpotify} size={'1x'} />
     <span>{text}</span>
   </LinkButton>
 )
