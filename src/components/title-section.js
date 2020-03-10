@@ -34,14 +34,14 @@ const MainContainer = styled(BackgroundSection)`
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 65% 0%;
-  height: 76vh;
+  min-height: 76vh;
   max-width: 800px;
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
   padding-top: 190px;
-  margin: 40px auto 0;
+  margin: 40px auto 40px;
 
   @media (max-width: 800px) {
     margin-left: 20px;
