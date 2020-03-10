@@ -2,11 +2,12 @@ import React from 'react'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import ResponsiveTitle from '../components/responsive-title'
 
 const Impressum = () => (
   <Layout>
     <SEO title="Impressum" />
-    <h1>Impressum</h1>
+    <ResponsiveTitle>Impressum</ResponsiveTitle>
     <p>Angaben gemäß § 5 TMG</p>
     <p>
       Silvio Schmidt <br />

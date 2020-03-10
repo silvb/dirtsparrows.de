@@ -24,7 +24,8 @@ const LayoutWrapper = styled.div`
 
 const Main = styled.main`
   flex: 1;
-  margin: ${({ noMargin }) => (noMargin ? 0 : '0 256px')};
+  margin: 0 auto;
+  max-width: 800px;
 
   @media (max-width: 800px) {
     margin: ${({ noMargin }) => (noMargin ? 0 : '0 16px')};

@@ -2,11 +2,12 @@ import React from 'react'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+import ResponsiveTitle from '../components/responsive-title'
 
 const Datenschutzerklaerung = () => (
   <Layout>
     <SEO title="Datenschutzerklärung" />
-    <h1>Datenschutzerklärung</h1>
+    <ResponsiveTitle>Datenschutzerklärung</ResponsiveTitle>
     <p>
       <strong>Allgemeiner Hinweis und Pflichtinformationen</strong>
     </p>
@@ -55,6 +56,7 @@ const Datenschutzerklaerung = () => (
       <a
         href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html"
         target="_blank"
+        rel="noopener noreferrer"
       >
         https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html
       </a>
@@ -134,7 +136,11 @@ const Datenschutzerklaerung = () => (
     <p>
       <small>
         Quelle: Datenschutz-Konfigurator von{' '}
-        <a href="http://www.mein-datenschutzbeauftragter.de" target="_blank">
+        <a
+          href="http://www.mein-datenschutzbeauftragter.de"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           mein-datenschutzbeauftragter.de
         </a>
       </small>
